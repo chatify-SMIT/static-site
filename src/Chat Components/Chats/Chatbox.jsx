@@ -11,7 +11,6 @@ function ChatBox() {
   const [arrivalMessage, setArrivalMessage] = useState(null);
 
   const socketRef = useRef(null);
-
   useEffect(() => {
     socketRef.current = io(process.env.REACT_APP_API_URL);
     const userId = localStorage.getItem("username");
