@@ -104,6 +104,23 @@ const Chat = ({ sender, receiver, userMessages, arrivalMessage }) => {
           </div>
         </div>
       </div>
+
+      <div className="d-md-none mt-5 ">
+        <input
+          className="w-100"
+          type="text"
+          value={inputChange}
+          onChange={handleChange}
+          onKeyPress={handleKeyPress}
+          placeholder="Type your message"
+        />
+        <div className={inputChange ? "sendico" : "nomicroico"}>
+          <div onClick={sendMessage}>
+            <i className="icon-paper-plane"></i>
+          </div>
+        </div>
+      </div>
+
       <div id="scrollContainer" className="chat-messages">
         {console.log(messages)}
         {messages.map((message, index) => (
